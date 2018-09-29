@@ -22,6 +22,6 @@ spring:
           search-locations: D:/work/git/yao/java/Hello_Spring_Cloud_Config
 
 ## bus.mq
-  activemq:
-    host: 192.168.16.37
-    port: 7200
+#  activemq:
+#    host: 192.168.16.37
+#    port: 7200

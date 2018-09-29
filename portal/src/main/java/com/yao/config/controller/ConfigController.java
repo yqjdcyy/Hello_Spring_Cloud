@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * Other:
  */
 @RestController
-@RequestMapping("/config")
 @RefreshScope
+@RequestMapping("/config")
 public class ConfigController {
 
     @Value("${config.hello:undefined}")
