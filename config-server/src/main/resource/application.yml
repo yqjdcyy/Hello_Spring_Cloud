@@ -1,0 +1,13 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yqjdcyy/Hello_Spring_Cloud_Config
+  activemq:
+    host: 192.168.16.37
+    port: 7200
