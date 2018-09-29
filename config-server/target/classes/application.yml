@@ -5,14 +5,14 @@ spring:
   application:
     name: spring-cloud-config-server
 
-# config.server git
+## config.server git
 #  cloud:
 #    config:
 #      server:
 #        git:
 #          uri: https://github.com/yqjdcyy/Hello_Spring_Cloud_Config
 
-# config.server locale
+## config.server locale
   profiles:
     active: native
   cloud:
@@ -21,6 +21,7 @@ spring:
         native:
           search-locations: D:/work/git/yao/java/Hello_Spring_Cloud_Config
 
+## bus.mq
   activemq:
     host: 192.168.16.37
     port: 7200

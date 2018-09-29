@@ -4,9 +4,15 @@ server:
 spring:
   application:
     name: portal
+
+## profile.env
+#  profiles:
+#    active: dev
   cloud:
     config:
       uri: http://localhost:10086
+
+## bus.mq
   activemq:
     host: 192.168.16.37
     port: 7200
