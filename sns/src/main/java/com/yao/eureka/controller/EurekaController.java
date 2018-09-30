@@ -20,7 +20,7 @@ public class EurekaController {
     @Autowired
     RestTemplate restTemplate;
 
-    @RequestMapping(value = "/{application}/{method}", method = RequestMethod.GET)
+    @RequestMapping(value = "/robbin/{application}/{method}", method = RequestMethod.GET)
     public String invoke(@PathVariable String application, @PathVariable String method) {
         return restTemplate.getForObject(String.format("http://%s/%s", application.toUpperCase(), method), String.class);
     }
