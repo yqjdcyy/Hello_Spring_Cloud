@@ -22,15 +22,15 @@ spring:
           search-locations: D:/work/git/yao/java/Hello_Spring_Cloud_Config
 
 ## Eureka.Register.*
-      discovery:
-        enabled: true
-        service-id: config-server
+#      discovery:
+#        enabled: true
+#        service-id: config-server
 
 ## Bus.Kafka
-    stream:
-      kafka:
-        binder:
-          brokers: "192.168.16.37:9092"
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: "192.168.16.37:9092"
 
 ## bus.mq
 #  activemq:

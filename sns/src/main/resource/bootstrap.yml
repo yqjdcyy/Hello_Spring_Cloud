@@ -1,9 +1,9 @@
 server:
-  port: 8100
+  port: 8200
 
 spring:
   application:
-    name: portal
+    name: sns
 
 ## profile.env
 #  profiles:
