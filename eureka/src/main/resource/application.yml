@@ -1,0 +1,22 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: spring-cloud-eureka-server
+
+# Eureka.Config.*
+eureka:
+  client:
+    # 是否将自身注册至 Eureka.Server
+    register-with-eureka: false
+    # 是否同步其它 Eureka.Server 节点数据
+    fetch-registry: false
+  instance:
+    # 检测心跳异常的超时时长
+    lease-expiration-duration-in-seconds: 90
+  server:
+    # 关闭自我保护机构
+    enable-self-preservation: false
+    # 检查失效服务的间隔时间
+    eviction-interval-timer-in-ms: 3000

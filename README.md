@@ -1,36 +1,36 @@
 
 # 实现
 ## 配置中心
-- [x]Config-Server
-- [x]Config-Client
-- [x]Config-Client/refresh
-- []Config-Server/bus/refresh
+- [x] Config-Server
+- [x] Config-Client
+- [x] Config-Client/refresh
+- [x] Config-Server/bus/refresh
 
 ## 服务治理
-- []Eureka
-- []Feign
-- []Ribbon
-- []Hystrix
-- []Zuul
-- []
+- [] Eureka
+- [] Feign
+- [] Ribbon
+- [] Hystrix
+- [] Zuul
+- [] 
 
 
 ## 分页式链路监控
-- []Sleuth
-- []Zipkin
-- []
+- [] Sleuth
+- [] Zipkin
+- [] 
 
 ## 消息组件
-- []Bus
+- [] Bus
 
 ## 安全控制
-- []Security
+- [] Security
 
 ## 补充
-- []Cluster
-- []Data.Flow
-- []CLI
-- []Task
+- [] Cluster
+- [] Data.Flow
+- [] CLI
+- [] Task
 
 
 
@@ -40,6 +40,9 @@
 |----------|---------------|-----------|
 | 配置中心 |               |           |
 |          | Config-Server | 10086     |
+| 服务治理 |               |           |
+|          | Eureka        | 10000     |
+|          |               |           |
 | 业务模块 |               |           |
 |          | Portal        | 8100/8199 |
 |          | Sns           | 8200/8299 |
