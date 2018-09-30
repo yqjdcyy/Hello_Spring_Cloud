@@ -21,7 +21,20 @@ spring:
         native:
           search-locations: D:/work/git/yao/java/Hello_Spring_Cloud_Config
 
+## Bus.Kafka
+    stream:
+      kafka:
+        binder:
+          brokers: "192.168.16.37:9092"
+
 ## bus.mq
 #  activemq:
 #    host: 192.168.16.37
 #    port: 7200
+
+## Actuator.*
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Other:
  */
 @SpringBootApplication
-@RefreshScope
-@RestController
 public class Application {
 
     public static void main(String[] args) {

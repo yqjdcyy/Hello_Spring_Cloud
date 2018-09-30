@@ -8,10 +8,21 @@ spring:
 ## profile.env
 #  profiles:
 #    active: dev
-
   cloud:
     config:
-      uri: http://localhost:10086
+      uri: "http://localhost:10086"
+
+## Bus.Kafka
+    stream:
+      kafka:
+        binder:
+          brokers: "192.168.16.37:9092"
+
+## bus.mq
+#  activemq:
+#    host: 192.168.16.37
+#    port: 7200
+
 
 ## Actuator.*
 management:
@@ -19,8 +30,3 @@ management:
     web:
       exposure:
         include: "*"
-
-## bus.mq
-#  activemq:
-#    host: 192.168.16.37
-#    port: 7200
