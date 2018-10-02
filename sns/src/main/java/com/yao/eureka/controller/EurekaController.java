@@ -1,5 +1,6 @@
 package com.yao.eureka.controller;
 
+import com.yao.eureka.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,16 @@ public class EurekaController {
     RestTemplate restTemplate;
 
     @RequestMapping(value = "/robbin/{application}/{method}", method = RequestMethod.GET)
-    public String invoke(@PathVariable String application, @PathVariable String method) {
+    public String robbin(@PathVariable String application, @PathVariable String method) {
         return restTemplate.getForObject(String.format("http://%s/%s", application.toUpperCase(), method), String.class);
+    }
+
+
+    @Autowired
+    FeignService feignService;
+
+    @RequestMapping(value = "/feign/{method}", method = RequestMethod.GET)
+    public String feign(@PathVariable String method) {
+        return feignService.config();
     }
 }
