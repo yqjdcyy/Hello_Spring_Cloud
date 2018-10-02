@@ -7,9 +7,9 @@
 - [x] Config-Server/bus/refresh
 
 ## 服务治理
-- [] Eureka
-- [] Feign
-- [] Ribbon
+- [x] Eureka
+- [x] Feign
+- [x] Ribbon
 - [] Hystrix
 - [] Zuul
 - [] 
@@ -42,7 +42,6 @@
 |          | Config-Server | 10086     |
 | 服务治理 |               |           |
 |          | Eureka        | 10000     |
-|          |               |           |
 | 业务模块 |               |           |
 |          | Portal        | 8100/8199 |
 |          | Sns           | 8200/8299 |
