@@ -1,11 +1,12 @@
 package com.yao.eureka.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.yao.eureka.service.FeignService;
+import org.apache.tomcat.jni.Time;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.Assert;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -33,5 +34,27 @@ public class EurekaController {
     @RequestMapping(value = "/feign/{method}", method = RequestMethod.GET)
     public String feign(@PathVariable String method) {
         return feignService.config();
+    }
+
+
+    @RequestMapping(value = "/hystrix/{method}", method = RequestMethod.GET)
+    @HystrixCommand(
+            fallbackMethod = "fallback",
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")})
+    public String hystrix(
+            @RequestParam Boolean error,
+            @RequestParam Integer duration) {
+
+        Assert.isTrue(null != error && !error, "Hystrix.Error");
+        if(null!= duration && duration> 0){
+            Time.sleep(duration);
+        }
+
+        return feignService.config();
+    }
+
+    public String fallback(Boolean error, Integer duration) {
+        return "Hystrix.Fallback";
     }
 }
