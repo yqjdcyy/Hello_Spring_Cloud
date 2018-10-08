@@ -10,7 +10,8 @@
 - [x] Eureka
 - [x] Feign
 - [x] Ribbon
-- [] Hystrix
+- [x] Hystrix
+- [] Hystrix.Turbine
 - [] Zuul
 - [] 
 
