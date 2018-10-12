@@ -1,0 +1,36 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: hystrix
+
+  cloud:
+    config:
+      uri: "http://localhost:10086"
+
+## Actuator.*
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
+
+## Eureka.*
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka
+
+
+
+## Turbine
+turbine:
+  app-config: hystrix
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
