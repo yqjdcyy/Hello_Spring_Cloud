@@ -11,7 +11,7 @@
 - [x] Feign
 - [x] Ribbon
 - [x] Hystrix
-- [] Hystrix.Turbine
+- [x] Hystrix.Turbine
 - [] Zuul
 - [] 
 
