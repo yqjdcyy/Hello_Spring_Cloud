@@ -16,9 +16,8 @@
 
 
 ## 分页式链路监控
-- [] Sleuth
-- [] Zipkin
-- [] 
+- [x] Sleuth
+- [x] Zipkin
 
 ## 消息组件
 - [] Bus
