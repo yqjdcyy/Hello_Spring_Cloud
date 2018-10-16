@@ -1,9 +1,9 @@
 server:
-  port: 8200
+  port: 8303
 
 spring:
   application:
-    name: sns
+    name: zipkin
 
 ## profile.env
 #  profiles:
@@ -12,25 +12,6 @@ spring:
     config:
       uri: "http://localhost:10086"
 
-## Zipkin.*
-  sleuth:
-    sampler:
-      probability: 1.0
-  zipkin:
-    base-url: http://localhost:8303
-
-## Bus.Kafka
-#    stream:
-#      kafka:
-#        binder:
-#          brokers: "192.168.16.37:9092"
-
-## bus.mq
-#  activemq:
-#    host: 192.168.16.37
-#    port: 7200
-
-
 ## Actuator.*
 management:
   endpoints:
@@ -38,9 +19,14 @@ management:
       exposure:
         include: "*"
 
+  ## Zipkin.*
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
 ## Eureka.*
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:10000/eureka
-

@@ -51,6 +51,7 @@
 |          | Other                              | 8300/8499 |
 |          | &nbsp; &nbsp; &nbsp; &nbsp;Hystrix | 8301      |
 |          | &nbsp; &nbsp; &nbsp; &nbsp;Zuul    | 8302      |
+|          | &nbsp; &nbsp; &nbsp; &nbsp;Zipkin  | 8303      |
 | 消息组件 |                                    |           |
 |          | Zoopkeeper                         | 7100      |
 |          | Kafka                              | 7101      |

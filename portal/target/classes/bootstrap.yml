@@ -12,6 +12,13 @@ spring:
     config:
       uri: "http://localhost:10086"
 
+## Zipkin.*
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:8303
+
 ## Bus.Kafka
 #    stream:
 #      kafka:
@@ -36,4 +43,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:10000/eureka
-
