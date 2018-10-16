@@ -12,8 +12,7 @@
 - [x] Ribbon
 - [x] Hystrix
 - [x] Hystrix.Turbine
-- [] Zuul
-- [] 
+- [x] Zuul
 
 
 ## 分页式链路监控
@@ -33,11 +32,14 @@
 - [] CLI
 - [] Task
 
+## 分页式
+- [] Docker
+
 
 
 # IP分配
 
-|   模块   |                服务                |   IP 段   |
+| 模块     | 服务                               | IP 段     |
 |----------|------------------------------------|-----------|
 | 配置中心 |                                    |           |
 |          | Config-Server                      | 10086     |
@@ -48,6 +50,7 @@
 |          | Sns                                | 8200/8299 |
 |          | Other                              | 8300/8499 |
 |          | &nbsp; &nbsp; &nbsp; &nbsp;Hystrix | 8301      |
+|          | &nbsp; &nbsp; &nbsp; &nbsp;Zuul    | 8302      |
 | 消息组件 |                                    |           |
 |          | Zoopkeeper                         | 7100      |
 |          | Kafka                              | 7101      |

@@ -1,0 +1,41 @@
+server:
+  port: 8302
+
+spring:
+  application:
+    name: zuul
+
+## profile.env
+#  profiles:
+#    active: dev
+  cloud:
+    config:
+      uri: "http://localhost:10086"
+
+## Actuator.*
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+## Eureka.*
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka
+
+
+## Zuul
+zuul:
+  routes:
+    portal:
+      path: /portal/**
+      serviceId: portal
+    sns:
+      path: /sns/**
+      serviceId: sns
+    hystrix:
+      path: /hystrix/**
+      serviceId: hystrix
+
